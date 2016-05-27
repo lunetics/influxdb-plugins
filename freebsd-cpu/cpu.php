@@ -139,12 +139,13 @@ class InfluxFreebsdCpu
                 $cpuDataFields[] = $this->processField($type, (int)$frequency.'i');
             }
 
-            $cpuDataFields[] = $host;
-            $cpuDataFields[] = $this->processField('cpu', $cpu);
+            $cpuDataTags[] = $host;
+            $cpuDataTags[] = $this->processField('cpu', $cpu);
 
-            $lines[] = implode(',', $cpuDataFields);
+            $lines[] = sprintf('%s %s', implode(',', $cpuDataTags), implode(',', $cpuDataFields));
 
             unset($cpuDataFields);
+            unset($cpuDataTags);
         }
 
         return $lines;
