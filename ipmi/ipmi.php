@@ -61,6 +61,9 @@ class InfluxIpmi
         $data = [];
         foreach (preg_split("/((\r?\n)|(\r\n?))/", $this->influxIpmiRaw) as $line) {
             $lineArray = preg_split("/\s*\|\s*/", $line);
+            if(count($lineArray) !== 10) {
+                continue;
+            }
             $lineArray = array_combine(self::$ipmiArrayValues, $lineArray);
 
             if ($lineArray['units'] == "Volts" && $lineArray['state'] != "na") {
