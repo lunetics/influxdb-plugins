@@ -6,7 +6,7 @@
  *      php ipmitool.php < ipmitool sensor
  *   or use a cronjob for faster execution:
  *      php ipmitool.php < /tmp/ipmidata.txt
- * 
+ *
  */
 
 $ipmitoolRawData = file_get_contents('php://stdin');
@@ -38,8 +38,12 @@ class InfluxIpmi
 
     private $influxIpmiRaw;
 
-    public function __construct($ipmitoolRawData)
+    public function __construct($ipmitoolRawData, $hostname = null)
     {
+        $this->hostname = $hostname;
+        if (null === $hostname || '' === $hostname) {
+            $this->hostname = gethostname();
+        }
         $this->influxIpmiRaw = $ipmitoolRawData;
     }
 
@@ -61,7 +65,7 @@ class InfluxIpmi
         $data = [];
         foreach (preg_split("/((\r?\n)|(\r\n?))/", $this->influxIpmiRaw) as $line) {
             $lineArray = preg_split("/\s*\|\s*/", $line);
-            if(count($lineArray) !== 10) {
+            if (count($lineArray) !== 10) {
                 continue;
             }
             $lineArray = array_combine(self::$ipmiArrayValues, $lineArray);
@@ -91,23 +95,32 @@ class InfluxIpmi
     private function processData(array $data)
     {
         $lines = [];
+        $host = $this->processField('host', $this->hostname);
         foreach ($data as $type => $sensorList) {
             foreach ($sensorList as $sensor) {
-                $sensorLines[] = $this->processField($sensor);
+                $sensorLines[] = $this->processField($sensor['sensor'], (float)$sensor['value']);
             }
-            $lines[] = sprintf('type=%s,%s', $type, implode(',', $sensorLines));
+            $sensorLines[] = $host;
+            $sensorLines[] = $this->processField('type', $type);
+            $lines[] = implode(',', $sensorLines);
             unset($sensorLines);
         }
 
         return $lines;
     }
 
-    private function processField(array $sensor)
+    /**
+     * @param string $fieldName
+     * @param string $value
+     *
+     * @return string
+     */
+    private function processField($fieldName, $value)
     {
-        $sensorId = preg_replace('/( |,)/', '\\\${0}', $sensor['sensor']);
-        $sensorValue = $sensor['value'];
+        $fieldName = preg_replace('/( |,)/', '\\\${0}', $fieldName);
+        $value = preg_replace('/( |,)/', '\\\${0}', $value);
 
-        return sprintf('%s=%s', $sensorId, $sensorValue);
+        return sprintf('%s=%s', $fieldName, $value);
     }
 }
 
