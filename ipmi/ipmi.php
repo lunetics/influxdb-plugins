@@ -103,10 +103,9 @@ class InfluxIpmi
             $sensorTags[] = $host;
             $sensorTags[] = $this->processField('type', $type);
 
-            $lines[] = implode(',', $sensorLines);
-
             $lines[] = sprintf('%s %s', implode(',', $sensorTags), implode(',', $sensorLines));
             unset($sensorLines);
+            unset($sensorTags);
         }
 
         return $lines;
