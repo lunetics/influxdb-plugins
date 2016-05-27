@@ -10,6 +10,10 @@
  */
 
 $ipmitoolRawData = file_get_contents('php://stdin');
+
+if (!strlen($ipmitoolRawData)) {
+    echo "No Input given!";
+}
 $influxIpmi = new InfluxIpmi($ipmitoolRawData);
 
 echo $influxIpmi;
