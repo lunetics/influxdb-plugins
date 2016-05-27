@@ -98,14 +98,16 @@ class InfluxIpmi
         $host = $this->processField('host', $this->hostname);
         foreach ($data as $type => $sensorList) {
             foreach ($sensorList as $sensor) {
-                $sensorLines[] = $this->processField($sensor['sensor'], (float)$sensor['value']);
-            }
-            $sensorTags[] = $host;
-            $sensorTags[] = $this->processField('type', $type);
+                $sensorLines[] = $this->processField('value', (float)$sensor['value']);
 
-            $lines[] = sprintf('%s %s', implode(',', $sensorTags), implode(',', $sensorLines));
-            unset($sensorLines);
-            unset($sensorTags);
+                $sensorTags[] = $host;
+                $sensorTags[] = $this->processField('type', $type);
+                $sensorTags[] = $this->processField('instance', $sensor['sensor']);
+
+                $lines[] = sprintf('%s %s', implode(',', $sensorTags), implode(',', $sensorLines));
+                unset($sensorLines);
+                unset($sensorTags);
+            }
         }
 
         return $lines;
