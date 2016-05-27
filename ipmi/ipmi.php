@@ -82,6 +82,7 @@ class InfluxIpmi
 
     private function processData(array $data)
     {
+        $lines = [];
         foreach ($data as $type => $sensorList) {
             foreach ($sensorList as $sensor) {
                 $sensorLines[] = $this->processField($sensor);
