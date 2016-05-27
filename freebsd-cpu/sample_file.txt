@@ -1,0 +1,114 @@
+dev.cpu.0.coretemp.delta: 64
+dev.cpu.0.coretemp.resolution: 1
+dev.cpu.0.coretemp.tjmax: 95.0C
+dev.cpu.0.coretemp.throttle_log: 0
+dev.cpu.0.temperature: 31.0C
+dev.cpu.0.freq: 2668
+dev.cpu.0.freq_levels: 2668/91000 2667/80000 2533/70000 2400/61000 2267/52000 2133/45000 2000/39000 1867/34000 1733/29000 1600/25000 1400/21875 1200/18750 1000/15625 800/12500 600/9375 400/6250 200/3125
+dev.cpu.0.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.0.cx_lowest: C1
+dev.cpu.1.coretemp.delta: 63
+dev.cpu.1.coretemp.resolution: 1
+dev.cpu.1.coretemp.tjmax: 95.0C
+dev.cpu.1.coretemp.throttle_log: 0
+dev.cpu.1.temperature: 32.0C
+dev.cpu.1.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.1.cx_lowest: C1
+dev.cpu.2.coretemp.delta: 64
+dev.cpu.2.coretemp.resolution: 1
+dev.cpu.2.coretemp.tjmax: 95.0C
+dev.cpu.2.coretemp.throttle_log: 0
+dev.cpu.2.temperature: 31.0C
+dev.cpu.2.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.2.cx_lowest: C1
+dev.cpu.3.coretemp.delta: 64
+dev.cpu.3.coretemp.resolution: 1
+dev.cpu.3.coretemp.tjmax: 95.0C
+dev.cpu.3.coretemp.throttle_log: 0
+dev.cpu.3.temperature: 31.0C
+dev.cpu.3.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.3.cx_lowest: C1
+dev.cpu.4.coretemp.delta: 62
+dev.cpu.4.coretemp.resolution: 1
+dev.cpu.4.coretemp.tjmax: 95.0C
+dev.cpu.4.coretemp.throttle_log: 0
+dev.cpu.4.temperature: 33.0C
+dev.cpu.4.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.4.cx_lowest: C1
+dev.cpu.5.coretemp.delta: 62
+dev.cpu.5.coretemp.resolution: 1
+dev.cpu.5.coretemp.tjmax: 95.0C
+dev.cpu.5.coretemp.throttle_log: 0
+dev.cpu.5.temperature: 33.0C
+dev.cpu.5.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.5.cx_lowest: C1
+dev.cpu.6.coretemp.delta: 56
+dev.cpu.6.coretemp.resolution: 1
+dev.cpu.6.coretemp.tjmax: 95.0C
+dev.cpu.6.coretemp.throttle_log: 0
+dev.cpu.6.temperature: 39.0C
+dev.cpu.6.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.6.cx_lowest: C1
+dev.cpu.7.coretemp.delta: 56
+dev.cpu.7.coretemp.resolution: 1
+dev.cpu.7.coretemp.tjmax: 95.0C
+dev.cpu.7.coretemp.throttle_log: 0
+dev.cpu.7.temperature: 39.0C
+dev.cpu.7.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.7.cx_lowest: C1
+dev.cpu.8.coretemp.delta: 61
+dev.cpu.8.coretemp.resolution: 1
+dev.cpu.8.coretemp.tjmax: 95.0C
+dev.cpu.8.coretemp.throttle_log: 0
+dev.cpu.8.temperature: 34.0C
+dev.cpu.8.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.8.cx_lowest: C1
+dev.cpu.9.coretemp.delta: 61
+dev.cpu.9.coretemp.resolution: 1
+dev.cpu.9.coretemp.tjmax: 95.0C
+dev.cpu.9.coretemp.throttle_log: 0
+dev.cpu.9.temperature: 34.0C
+dev.cpu.9.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.9.cx_lowest: C1
+dev.cpu.10.coretemp.delta: 54
+dev.cpu.10.coretemp.resolution: 1
+dev.cpu.10.coretemp.tjmax: 95.0C
+dev.cpu.10.coretemp.throttle_log: 0
+dev.cpu.10.temperature: 41.0C
+dev.cpu.10.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.10.cx_lowest: C1
+dev.cpu.11.coretemp.delta: 54
+dev.cpu.11.coretemp.resolution: 1
+dev.cpu.11.coretemp.tjmax: 95.0C
+dev.cpu.11.coretemp.throttle_log: 0
+dev.cpu.11.temperature: 41.0C
+dev.cpu.11.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.11.cx_lowest: C1
+dev.cpu.12.coretemp.delta: 62
+dev.cpu.12.coretemp.resolution: 1
+dev.cpu.12.coretemp.tjmax: 95.0C
+dev.cpu.12.coretemp.throttle_log: 0
+dev.cpu.12.temperature: 33.0C
+dev.cpu.12.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.12.cx_lowest: C1
+dev.cpu.13.coretemp.delta: 62
+dev.cpu.13.coretemp.resolution: 1
+dev.cpu.13.coretemp.tjmax: 95.0C
+dev.cpu.13.coretemp.throttle_log: 0
+dev.cpu.13.temperature: 33.0C
+dev.cpu.13.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.13.cx_lowest: C1
+dev.cpu.14.coretemp.delta: 58
+dev.cpu.14.coretemp.resolution: 1
+dev.cpu.14.coretemp.tjmax: 95.0C
+dev.cpu.14.coretemp.throttle_log: 0
+dev.cpu.14.temperature: 37.0C
+dev.cpu.14.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.14.cx_lowest: C1
+dev.cpu.15.coretemp.delta: 58
+dev.cpu.15.coretemp.resolution: 1
+dev.cpu.15.coretemp.tjmax: 95.0C
+dev.cpu.15.coretemp.throttle_log: 0
+dev.cpu.15.temperature: 37.0C
+dev.cpu.15.cx_supported: C1/1/3 C2/3/205 C3/3/245
+dev.cpu.15.cx_lowest: C1
