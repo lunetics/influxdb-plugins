@@ -56,7 +56,7 @@ class InfluxFreebsdCpu
         $lines = $this->processData($data);
         $string = '';
         foreach ($lines as $line) {
-            $string .= sprintf("%s,%s %d\n", self::MEASUREMENT, $line, time());
+            $string .= sprintf("%s,%s\n", self::MEASUREMENT, $line);
         }
 
         return $string;
