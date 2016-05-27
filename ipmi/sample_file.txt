@@ -1,0 +1,103 @@
+BB +1.2V Vtt     | 1.197      | Volts      | ok    | na        | 1.096     | 1.134     | 1.285     | 1.323     | na        
+BB +1.5V AUX     | 1.466      | Volts      | ok    | na        | 1.334     | 1.373     | 1.622     | 1.669     | na        
+BB +1.5V         | 1.482      | Volts      | ok    | na        | 1.326     | 1.365     | 1.625     | 1.677     | na        
+BB +1.8V         | 1.785      | Volts      | ok    | na        | 1.622     | 1.673     | 1.907     | 1.969     | na        
+BB +3.3V         | 3.354      | Volts      | ok    | na        | 2.941     | 3.027     | 3.578     | 3.681     | na        
+BB +3.3V STB     | 3.354      | Volts      | ok    | na        | 3.027     | 3.113     | 3.509     | 3.612     | na        
+BB +1.5V ESB     | 1.505      | Volts      | ok    | na        | 1.357     | 1.404     | 1.591     | 1.638     | na        
+BB +5V           | 5.070      | Volts      | ok    | na        | 4.446     | 4.576     | 5.408     | 5.564     | na        
+BB +12V AUX      | 11.904     | Volts      | ok    | na        | 10.416    | 10.726    | 13.144    | 13.578    | na        
+BB +0.9V         | 0.898      | Volts      | ok    | na        | 0.811     | 0.835     | 0.950     | 0.979     | na        
+Serverboard Temp | 39.000     | degrees C  | ok    | na        | 5.000     | 10.000    | 61.000    | 66.000    | na        
+Ctrl Panel Temp  | 31.000     | degrees C  | ok    | na        | 0.000     | 5.000     | 44.000    | 48.000    | na        
+Fan 1            | 7740.000   | RPM        | ok    | na        | 1720.000  | 1978.000  | na        | na        | na        
+Fan 2            | 8557.000   | RPM        | ok    | na        | 1720.000  | 1978.000  | na        | na        | na        
+Fan 3            | 7611.000   | RPM        | ok    | na        | 1720.000  | 1978.000  | na        | na        | na        
+Fan 4            | 8557.000   | RPM        | ok    | na        | 1720.000  | 1978.000  | na        | na        | na        
+Fan 5            | 10044.000  | RPM        | ok    | na        | 2046.000  | 2356.000  | na        | na        | na        
+Fan 6            | 9300.000   | RPM        | ok    | na        | 2046.000  | 2356.000  | na        | na        | na        
+PS1 AC Current   | 0.558      | Amps       | ok    | na        | na        | na        | 11.222    | 11.904    | na        
+PS2 AC Current   | 0.558      | Amps       | ok    | na        | na        | na        | 11.222    | 11.904    | na        
+PS1 +12V Current | 9.000      | Amps       | ok    | na        | na        | na        | 66.000    | 70.000    | na        
+PS2 +12V Current | 10.000     | Amps       | ok    | na        | na        | na        | 66.000    | 70.000    | na        
+PS1 +12V Power   | 120.000    | Watts      | ok    | na        | na        | na        | 792.000   | 840.000   | na        
+PS2 +12V Power   | 120.000    | Watts      | ok    | na        | na        | na        | 792.000   | 840.000   | na        
+P1 Therm Margin  | -41.000    | degrees C  | ok    | na        | na        | na        | na        | na        | na        
+P2 Therm Margin  | -43.000    | degrees C  | ok    | na        | na        | na        | na        | na        | na        
+P1 Therm Ctrl %  | 0.000      | unspecified | ok    | na        | na        | na        | na        | 49.530    | na        
+P2 Therm Ctrl %  | 0.000      | unspecified | ok    | na        | na        | na        | na        | 49.530    | na        
+Proc 1 Vccp      | 1.228      | Volts      | ok    | na        | na        | na        | na        | na        | na        
+Proc 2 Vccp      | 1.228      | Volts      | ok    | na        | na        | na        | na        | na        | na        
+Mem Therm Margin | na         | degrees C  | na    | na        | na        | na        | 4.000     | 8.000     | na        
+Pwr Unit Stat    | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+Power Redundancy | 0x0        | discrete   | 0x0100| na        | na        | na        | na        | na        | na        
+BMC Watchdog     | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+Platform Secu V  | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+Physical Scrty   | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+FP Interrupt     | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+Event Log Disabl | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+Session Audit    | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+System Event     | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+BB Vbat          | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+Fan 1 Present    | 0x0        | discrete   | 0x0200| na        | na        | na        | na        | na        | na        
+Fan 2 Present    | 0x0        | discrete   | 0x0200| na        | na        | na        | na        | na        | na        
+Fan 3 Present    | 0x0        | discrete   | 0x0200| na        | na        | na        | na        | na        | na        
+Fan 4 Present    | 0x0        | discrete   | 0x0200| na        | na        | na        | na        | na        | na        
+Fan 5 Present    | 0x0        | discrete   | 0x0200| na        | na        | na        | na        | na        | na        
+Fan 6 Present    | 0x0        | discrete   | 0x0200| na        | na        | na        | na        | na        | na        
+Fan Redundancy   | 0x0        | discrete   | 0x0100| na        | na        | na        | na        | na        | na        
+PS1 Status       | 0x0        | discrete   | 0x0100| na        | na        | na        | na        | na        | na        
+PS2 Status       | 0x0        | discrete   | 0x0100| na        | na        | na        | na        | na        | na        
+ACPI State       | 0x0        | discrete   | 0x0100| na        | na        | na        | na        | na        | na        
+Button           | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+SMI Timeout      | 0x0        | discrete   | 0x0100| na        | na        | na        | na        | na        | na        
+NMI State        | 0x0        | discrete   | 0x0100| na        | na        | na        | na        | na        | na        
+SMI State        | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+Processor 1 Stat | 0x0        | discrete   | 0x8000| na        | na        | na        | na        | na        | na        
+Processor 2 Stat | 0x0        | discrete   | 0x8000| na        | na        | na        | na        | na        | na        
+PCIe Link0       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link1       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link2       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link3       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link4       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link5       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link6       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link7       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link8       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link9       | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link10      | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link11      | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link12      | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+PCIe Link13      | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+CPU1 VRD Temp    | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+CPU2 VRD Temp    | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+CPU1 Vcc OOR     | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+CPU2 Vcc OOR     | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+CPU Popul Error  | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+DIMM 1A          | 0x0        | discrete   | 0x0400| na        | na        | na        | na        | na        | na        
+DIMM 2A          | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM 1B          | 0x0        | discrete   | 0x0400| na        | na        | na        | na        | na        | na        
+DIMM 2B          | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM 1C          | 0x0        | discrete   | 0x0400| na        | na        | na        | na        | na        | na        
+DIMM 2C          | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM 1D          | 0x0        | discrete   | 0x0400| na        | na        | na        | na        | na        | na        
+DIMM 2D          | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM Spar Enb1   | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM Spar Redu1  | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM Spar Enb2   | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM Spar Redu2  | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM Mirro Enbl  | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+DIMM MirroRedu1  | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+HSBP Temp        | 32.000     | degrees C  | ok    | -128.000  | na        | -48.000   | -128.000  | na        | na        
+Drv 1 Stat       | 0x0        | discrete   | 0x008e| na        | na        | na        | na        | na        | na        
+Drv 2 Stat       | 0x0        | discrete   | 0x008e| na        | na        | na        | na        | na        | na        
+Drv 3 Stat       | 0x0        | discrete   | 0x0080| na        | na        | na        | na        | na        | na        
+Drv 4 Stat       | 0x0        | discrete   | 0x0080| na        | na        | na        | na        | na        | na        
+Drv 5 Stat       | 0x0        | discrete   | 0x0080| na        | na        | na        | na        | na        | na        
+Drv 6 Stat       | 0x0        | discrete   | 0x0080| na        | na        | na        | na        | na        | na        
+Drv 1 Pres       | 0x0        | discrete   | 0x0180| na        | na        | na        | na        | na        | na        
+Drv 2 Pres       | 0x0        | discrete   | 0x0180| na        | na        | na        | na        | na        | na        
+Drv 3 Pres       | 0x0        | discrete   | 0x0080| na        | na        | na        | na        | na        | na        
+Drv 4 Pres       | 0x0        | discrete   | 0x0080| na        | na        | na        | na        | na        | na        
+Drv 5 Pres       | 0x0        | discrete   | 0x0080| na        | na        | na        | na        | na        | na        
+Drv 6 Pres       | 0x0        | discrete   | 0x0080| na        | na        | na        | na        | na        | na    

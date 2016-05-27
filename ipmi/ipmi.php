@@ -1,15 +1,21 @@
 <?php
+/**
+ * Reads 'ipmitool sensor' output from stream and converts it into influxdb line protocol
+ *
+ * usage example:
+ *      php ipmitool.php < ipmitool sensor
+ *   or use a cronjob for faster execution:
+ *      php ipmitool.php < /tmp/ipmidata.txt
+ * 
+ */
 
 $ipmitoolRawData = file_get_contents('php://stdin');
-
 $influxIpmi = new InfluxIpmi($ipmitoolRawData);
 
 echo $influxIpmi;
 
-
 class InfluxIpmi
 {
-
     const MEASUREMENT = 'ipmi';
 
     private static $ipmiArrayValues = [
