@@ -53,7 +53,7 @@ class InfluxIpmi
         $lines = $this->processData($data);
         $string = '';
         foreach ($lines as $line) {
-            $string .= sprintf("%s,%s %d\n", self::MEASUREMENT, $line, time());
+            $string .= sprintf("%s,%s\n", self::MEASUREMENT, $line);
         }
 
         return $string;
@@ -100,9 +100,12 @@ class InfluxIpmi
             foreach ($sensorList as $sensor) {
                 $sensorLines[] = $this->processField($sensor['sensor'], (float)$sensor['value']);
             }
-            $sensorLines[] = $host;
-            $sensorLines[] = $this->processField('type', $type);
+            $sensorTags[] = $host;
+            $sensorTags[] = $this->processField('type', $type);
+
             $lines[] = implode(',', $sensorLines);
+
+            $lines[] = sprintf('%s %s', implode(',', $sensorTags), implode(',', $sensorLines));
             unset($sensorLines);
         }
 
