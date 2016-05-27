@@ -69,6 +69,9 @@ class InfluxFreebsdCpu
     {
         $data = [];
         foreach (preg_split("/((\r?\n)|(\r\n?))/", $this->sysctlCpuInfo) as $line) {
+            if(strpos($line, 'dev.cpu') === false) {
+                continue;
+            }
             $line = preg_replace('/dev.cpu.(\d+)(.*)/', 'cpu${1}${2}', $line);
             $data = array_merge_recursive($this->stringToArray($line), $data);
         }
