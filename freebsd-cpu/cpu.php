@@ -5,11 +5,21 @@
  *  * freq
  *  * temperature
  *
- * e.g. php cpu.php < sysctl -iq dev.cpu |grep -v %
+ * e.g. php cpu.php < sysctl -iq dev.cpu |grep -v % 
  */
 
 $sysctlRawData = file_get_contents('php://stdin');
-$cpuInfo = new InfluxFreebsdCpu($sysctlRawData);
+
+if (!strlen($ipmitoolRawData)) {
+    echo "No Input given!";
+    die();
+}
+
+if($argc = 2 && strlen($argv[1]) >= 1) {
+    $hostname = $argv[1];
+}
+
+$cpuInfo = new InfluxFreebsdCpu($sysctlRawData, $hostname);
 
 echo $cpuInfo;
 

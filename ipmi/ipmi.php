@@ -4,6 +4,8 @@
  *
  * usage example:
  *      php ipmitool.php < ipmitool sensor
+ *   or with custom hostname
+ *      php ipmitool.php < ipmitool sensor $(hostname -fqd)
  *   or use a cronjob for faster execution:
  *      php ipmitool.php < /tmp/ipmidata.txt
  *
@@ -15,7 +17,12 @@ if (!strlen($ipmitoolRawData)) {
     echo "No Input given!";
     die();
 }
-$influxIpmi = new InfluxIpmi($ipmitoolRawData);
+
+if($argc = 2 && strlen($argv[1]) >= 1) {
+    $hostname = $argv[1];
+}
+
+$influxIpmi = new InfluxIpmi($ipmitoolRawData, $hostname);
 
 echo $influxIpmi;
 
