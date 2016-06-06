@@ -10,7 +10,7 @@
 
 $sysctlRawData = file_get_contents('php://stdin');
 
-if (!strlen($ipmitoolRawData)) {
+if (!strlen($sysctlRawData)) {
     echo "No Input given!";
     die();
 }
