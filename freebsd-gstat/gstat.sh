@@ -1,5 +1,21 @@
 #!/bin/sh
-gstat -o -d -b -I 5s \
+###
+# ABOUT  : telegraf monitoring script for gstat (geom stat) disk statistics
+# AUTHOR : Matthias Breddin <mb@lunetics.com> (c) 2015
+# LICENSE: GNU GPL v3
+#
+# This script parses the "gstat" batch output for available data
+# Generates output suitable for Exec plugin of telegraf.
+#
+# It includes a few disks e.g. mfid, da, ad and zfs zvol's (without snapshots)
+# Also cd, ufsid and gpt geom providers are ignored
+#
+# Requirements:
+#       Freebsd
+#
+# Typical usage:
+#   /usr/local/telegraf-plugins/freebsd-gstat/gstat.sh
+`which gstat` -o -d -b -I 5s \
 |pcregrep '(mfid|ad|da)[0-9]+|zvol((?!@|ufsid\/|cd\d+|gpt\/).)*$' \
 |awk -v hostname=$(hostname -f) '{
     printf "gstat,host="hostname",disk="$15" transaction_queue_length="$1"i,ops_per_second="$2"i,percent_busy="$14","
