@@ -15,7 +15,7 @@
 #
 # Typical usage:
 #   /usr/local/telegraf-plugins/freebsd-gstat/gstat.sh
-`which gstat` -o -d -b -I 5s \
+`which sudo` `which gstat` -o -d -b -I 5s \
 |pcregrep '(mfid|ad|da)[0-9]+|zvol((?!@|ufsid\/|cd\d+|gpt\/).)*$' \
 |awk -v hostname=$(hostname -f) '{
     printf "gstat,host="hostname",disk="$15" transaction_queue_length="$1"i,ops_per_second="$2"i,percent_busy="$14","

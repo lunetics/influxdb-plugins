@@ -32,8 +32,8 @@
 NUM_CPUS=`/sbin/sysctl -n hw.ncpu`;
 for i in `seq 0 $(($NUM_CPUS -1))`
     do
-    `which sysctl` -n dev.cpu.$i.temperature \
-    | awk -v cpunum=$i -v hostname=$(hostname -f) -v freq=$(`which sysctl` -n dev.cpu.0.freq) ' BEGIN { ORS="";}{
+    `which sudo` `which sysctl` -n dev.cpu.$i.temperature \
+    | awk -v cpunum=$i -v hostname=$(hostname -f) -v freq=$(`which sudo` `which sysctl` -n dev.cpu.0.freq) ' BEGIN { ORS="";}{
                 cputemp=sprintf("%.0f",$0);
                 print "cpu,host="hostname",cpu=cpu"cpunum" temperature="cputemp",frequency="freq"i\n";
             }';
