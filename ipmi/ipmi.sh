@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 ###
 # ABOUT  : telegraf monitoring script for ipmi statistics
 # AUTHOR : Matthias Breddin <mb@lunetics.com> (c) 2015

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 ###
 # ABOUT  : telegraf monitoring script for gstat (geom stat) disk statistics
 # AUTHOR : Matthias Breddin <mb@lunetics.com> (c) 2015

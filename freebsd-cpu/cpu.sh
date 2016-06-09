@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ###
 # ABOUT  : telegraf monitoring script for cpu frequency and temperature per core statistics
 # AUTHOR : Matthias Breddin <mb@lunetics.com> (c) 2015
