@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 ###
 # ABOUT  : telegraf monitoring script for gstat (geom stat) disk statistics
 # AUTHOR : Matthias Breddin <mb@lunetics.com> (c) 2015
@@ -15,9 +15,10 @@
 #
 # Typical usage:
 #   /usr/local/telegraf-plugins/freebsd-gstat/gstat.sh
-`which sudo` `which gstat` -o -d -b -I 5s \
-|pcregrep '(mfid|ad|da)[0-9]+|zvol((?!@|ufsid\/|cd\d+|gpt\/).)*$' \
-|awk -v hostname=$(hostname -f) '{
+PATH=$PATH:/bin:/usr/bin/:/usr/local/bin/:/usr/local/sbin
+gstat -o -d -b -I 4500ms \
+| pcregrep "(mfid|ad|da)[0-9]+|zvol((?!@|ufsid\/|cd\d+|gpt\/).)*$" \
+| awk -v hostname=`hostname -f` '{
     printf "gstat,host="hostname",disk="$15" transaction_queue_length="$1"i,ops_per_second="$2"i,percent_busy="$14","
     printf "reads_per_second="$3"i,read_kbps="$4"i,read_transcation_time_in_milliseconds="$5","
     printf "writes_per_second="$6"i,write_kbps="$7",write_transaction_time_in_milliseconds="$8","

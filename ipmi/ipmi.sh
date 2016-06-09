@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 ###
 # ABOUT  : telegraf monitoring script for ipmi statistics
 # AUTHOR : Matthias Breddin <mb@lunetics.com> (c) 2015
@@ -43,7 +43,7 @@
 # ...
 #
 ###
-PATH=/bin:/usr/bin/:/usr/local/bin/
+PATH=$PATH:/bin:/usr/bin/:/usr/local/bin/:/usr/local/sbin
 `which sudo` `which ipmitool` sensor \
 | awk -v hostname=$(hostname -f) -F'|' 'tolower($3) ~ /(volt|rpm|watt|degree)/ && $2 !~ /na/ {
             if (tolower($3) ~ /volt/) type="voltage";

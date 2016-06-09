@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 ###
 # ABOUT  : telegraf monitoring script for cpu frequency and temperature per core statistics
 # AUTHOR : Matthias Breddin <mb@lunetics.com> (c) 2015
@@ -30,11 +30,14 @@
 #   ...
 #
 ###
+PATH=$PATH:/bin:/usr/bin/:/usr/local/bin/:/usr/local/sbin
 NUM_CPUS=`/sbin/sysctl -n hw.ncpu`;
+CMD_SUDO=`which sudo`
+CMD_SYSCTL=`which sysctl`
 for i in `seq 0 $(($NUM_CPUS -1))`
     do
-    `which sudo` `which sysctl` -n dev.cpu.$i.temperature \
-    | awk -v cpunum=$i -v hostname=$(hostname -f) -v freq=$(`which sudo` `which sysctl` -n dev.cpu.0.freq) ' BEGIN { ORS="";}{
+    $CMD_SUDO $CMD_SYSCTL -n dev.cpu.$i.temperature \
+    | awk -v cpunum=$i -v hostname=`hostname -f` -v freq=`$CMD_SUDO $CMD_SYSCTL -n dev.cpu.0.freq` ' BEGIN { ORS="";}{
                 cputemp=sprintf("%.0f",$0);
                 print "cpu,host="hostname",cpu=cpu"cpunum" temperature="cputemp",frequency="freq"i\n";
             }';
